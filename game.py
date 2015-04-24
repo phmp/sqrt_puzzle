@@ -56,14 +56,14 @@ class Puzzle():
                 self.gap = goal
                 break
 
+if __name__ == '__main__':
+    puzzle = Puzzle(7)
+    is_finished = False
+    while not is_finished:
+        print puzzle
+        print puzzle.get_valid_moves()
+        puzzle.move_to(raw_input('Your move: '))
+        is_finished = puzzle.is_finished()
 
-game = Puzzle(7)
-is_finished = False
-while not is_finished:
-    print game
-    print game.get_valid_moves()
-    game.move_to(raw_input('Your move: '))
-    is_finished = game.is_finished()
-
-print "Game over"
+    print "Game over"
 
